@@ -13,4 +13,6 @@ create TABLE users (
 
 insert into users (username, password, role) values ('admin', 'admin', 'admin');
 
-insert into projects (title, description) values ('Project 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+insert into projects (title, description) values ('Project 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Project 2', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Project 3', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
