@@ -10,3 +10,7 @@ create TABLE users (
     password VARCHAR(255) NOT NULL,
     role ENUM('user', 'admin') DEFAULT 'user'
 );
+
+insert into users (username, password, role) values ('admin', 'admin', 'admin');
+
+insert into projects (title, description) values ('Project 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
