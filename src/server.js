@@ -1,13 +1,15 @@
-import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import express from "express";
 import projectRoutes from "./projectRoutes.js";
 
 dotenv.config();
 
 const port = process.env.APP_PORT;
 const app = express();
-app.use(cors());
+if (process.env.CLIENT_URL != null) {
+	app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true }));
+}
 app.use(express.json());
 
 app.get("/", (req, res) => {
